@@ -1,0 +1,55 @@
+/* BILOG LLC */
+:root {
+  --bg: #f7f5f1;
+  --surface: #ffffff;
+  --text: #22201c;
+  --dim: #6b655c;
+  --line: #e3ddd2;
+  --accent: #e8642c;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1a1e;
+    --surface: #252429;
+    --text: #f1eee8;
+    --dim: #a7a29a;
+    --line: #38363d;
+    --accent: #ff8a5b;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Hiragino Sans', 'Noto Sans JP', system-ui, sans-serif;
+  line-height: 1.8;
+}
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px max(16px, env(safe-area-inset-left, 0px)) 56px max(16px, env(safe-area-inset-right, 0px));
+}
+header.site {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+header.site .name { font-size: 20px; font-weight: 700; color: var(--text); text-decoration: none; }
+header.site nav { display: flex; gap: 16px; font-size: 14px; }
+a { color: var(--accent); }
+h1 { font-size: 26px; line-height: 1.4; margin: 32px 0 8px; text-wrap: balance; }
+h2 { font-size: 18px; margin: 32px 0 8px; }
+.lead { color: var(--dim); }
+table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 15px; }
+th { width: 9em; color: var(--dim); font-weight: 600; }
+tr:last-child th, tr:last-child td { border-bottom: 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--dim); font-size: 13px; }
